@@ -84,7 +84,7 @@ public class ClassDropDownHandler : MonoBehaviour
                 hitDice = 6;
                 break;
         }
-        GameManagerSingleton.Instance.playerClass = playerClass;
-        GameManagerSingleton.Instance.hitDice = hitDice;
+        GameManagerSingleton.Instance.player.playerClass = playerClass;
+        GameManagerSingleton.Instance.player.hitDice = hitDice;
     }
 }

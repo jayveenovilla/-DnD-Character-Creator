@@ -429,14 +429,14 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 33769659}
   m_TextComponent: {fileID: 168774455}
   m_Placeholder: {fileID: 518564002}
-  m_ContentType: 0
+  m_ContentType: 2
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 4
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
-  m_CharacterLimit: 0
+  m_CharacterValidation: 1
+  m_CharacterLimit: 2
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
@@ -512,22 +512,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Textfield: {fileID: 0}
-  characterName: 
-  race: 
-  playerClass: 
-  alignment: 
-  Ability_Strength: 0
-  Ability_Dexterity: 0
-  Ability_Constitution: 0
-  Ability_Intelligence: 0
-  Ability_Wisdom: 0
-  Ability_Charisma: 0
-  defaultModifier: 2
-  currentXP: 0
-  maxXP: 2147483647
-  currentHP: 0
-  maxHP: 0
-  armorClass: 0
   playerCreated: 0
 --- !u!1 &74355177
 GameObject:
@@ -762,22 +746,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Textfield: {fileID: 0}
-  characterName: 
-  race: 
-  playerClass: 
-  alignment: 
-  Ability_Strength: 0
-  Ability_Dexterity: 0
-  Ability_Constitution: 0
-  Ability_Intelligence: 0
-  Ability_Wisdom: 0
-  Ability_Charisma: 0
-  defaultModifier: 2
-  currentXP: 0
-  maxXP: 2147483647
-  currentHP: 0
-  maxHP: 0
-  armorClass: 0
   playerCreated: 0
 --- !u!1 &130936661
 GameObject:
@@ -1463,22 +1431,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Textfield: {fileID: 879554968}
-  characterName: 
-  race: 
-  playerClass: 
-  alignment: 
-  Ability_Strength: 0
-  Ability_Dexterity: 0
-  Ability_Constitution: 0
-  Ability_Intelligence: 0
-  Ability_Wisdom: 0
-  Ability_Charisma: 0
-  defaultModifier: 2
-  currentXP: 0
-  maxXP: 2147483647
-  currentHP: 0
-  maxHP: 0
-  armorClass: 0
   playerCreated: 0
 --- !u!114 &264768480
 MonoBehaviour:
@@ -1914,22 +1866,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Textfield: {fileID: 525410243}
-  characterName: 
-  race: 
-  playerClass: 
-  alignment: 
-  Ability_Strength: 0
-  Ability_Dexterity: 0
-  Ability_Constitution: 0
-  Ability_Intelligence: 0
-  Ability_Wisdom: 0
-  Ability_Charisma: 0
-  defaultModifier: 2
-  currentXP: 0
-  maxXP: 2147483647
-  currentHP: 0
-  maxHP: 0
-  armorClass: 0
   playerCreated: 0
 --- !u!114 &403988841
 MonoBehaviour:
@@ -3373,22 +3309,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Textfield: {fileID: 662597006}
-  characterName: 
-  race: 
-  playerClass: 
-  alignment: 
-  Ability_Strength: 0
-  Ability_Dexterity: 0
-  Ability_Constitution: 0
-  Ability_Intelligence: 0
-  Ability_Wisdom: 0
-  Ability_Charisma: 0
-  defaultModifier: 2
-  currentXP: 0
-  maxXP: 2147483647
-  currentHP: 0
-  maxHP: 0
-  armorClass: 0
   playerCreated: 0
 --- !u!1 &678562273
 GameObject:
@@ -3708,13 +3628,13 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 738515823}
   m_TextComponent: {fileID: 662597006}
   m_Placeholder: {fileID: 895660582}
-  m_ContentType: 0
+  m_ContentType: 5
   m_InputType: 0
   m_AsteriskChar: 42
-  m_KeyboardType: 0
+  m_KeyboardType: 6
   m_LineType: 0
   m_HideMobileInput: 0
-  m_CharacterValidation: 0
+  m_CharacterValidation: 4
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -3791,22 +3711,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Textfield: {fileID: 662597006}
-  characterName: 
-  race: 
-  playerClass: 
-  alignment: 
-  Ability_Strength: 0
-  Ability_Dexterity: 0
-  Ability_Constitution: 0
-  Ability_Intelligence: 0
-  Ability_Wisdom: 0
-  Ability_Charisma: 0
-  defaultModifier: 2
-  currentXP: 0
-  maxXP: 2147483647
-  currentHP: 0
-  maxHP: 0
-  armorClass: 0
   playerCreated: 0
 --- !u!1 &752926504
 GameObject:
@@ -6442,22 +6346,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Textfield: {fileID: 232858797}
-  characterName: 
-  race: 
-  playerClass: 
-  alignment: 
-  Ability_Strength: 0
-  Ability_Dexterity: 0
-  Ability_Constitution: 0
-  Ability_Intelligence: 0
-  Ability_Wisdom: 0
-  Ability_Charisma: 0
-  defaultModifier: 2
-  currentXP: 0
-  maxXP: 2147483647
-  currentHP: 0
-  maxHP: 0
-  armorClass: 0
   playerCreated: 0
 --- !u!114 &1524146456
 MonoBehaviour:
@@ -7119,22 +7007,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Textfield: {fileID: 74355179}
-  characterName: 
-  race: 
-  playerClass: 
-  alignment: 
-  Ability_Strength: 0
-  Ability_Dexterity: 0
-  Ability_Constitution: 0
-  Ability_Intelligence: 0
-  Ability_Wisdom: 0
-  Ability_Charisma: 0
-  defaultModifier: 2
-  currentXP: 0
-  maxXP: 2147483647
-  currentHP: 0
-  maxHP: 0
-  armorClass: 0
   playerCreated: 0
 --- !u!114 &1800565177
 MonoBehaviour:
@@ -7708,22 +7580,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Textfield: {fileID: 1121101235}
-  characterName: 
-  race: 
-  playerClass: 
-  alignment: 
-  Ability_Strength: 0
-  Ability_Dexterity: 0
-  Ability_Constitution: 0
-  Ability_Intelligence: 0
-  Ability_Wisdom: 0
-  Ability_Charisma: 0
-  defaultModifier: 2
-  currentXP: 0
-  maxXP: 2147483647
-  currentHP: 0
-  maxHP: 0
-  armorClass: 0
   playerCreated: 0
 --- !u!114 &1929828063
 MonoBehaviour:
@@ -7959,22 +7815,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Textfield: {fileID: 1022835674}
-  characterName: 
-  race: 
-  playerClass: 
-  alignment: 
-  Ability_Strength: 0
-  Ability_Dexterity: 0
-  Ability_Constitution: 0
-  Ability_Intelligence: 0
-  Ability_Wisdom: 0
-  Ability_Charisma: 0
-  defaultModifier: 2
-  currentXP: 0
-  maxXP: 2147483647
-  currentHP: 0
-  maxHP: 0
-  armorClass: 0
   playerCreated: 0
 --- !u!114 &1979052567
 MonoBehaviour:

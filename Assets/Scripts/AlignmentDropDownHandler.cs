@@ -58,6 +58,6 @@ public class AlignmentDropDownHandler : MonoBehaviour
                 alignment = "Lawful Evil";
                 break;
         }
-        GameManagerSingleton.Instance.alignment = alignment;
+        GameManagerSingleton.Instance.player.alignment = alignment;
     }
 }

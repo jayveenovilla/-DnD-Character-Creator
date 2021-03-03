@@ -68,8 +68,8 @@ public class RaceDropDownHandler : MonoBehaviour
                 speedWalking = 30;
                 break;
         }
-        GameManagerSingleton.Instance.race = race;
-        GameManagerSingleton.Instance.speedWalking = speedWalking;
+        GameManagerSingleton.Instance.player.race = race;
+        GameManagerSingleton.Instance.player.speedWalking = speedWalking;
     }
     // Update is called once per frame
     void Update()

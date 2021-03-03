@@ -132,7 +132,6 @@ GameObject:
   - component: {fileID: 10972462}
   - component: {fileID: 10972464}
   - component: {fileID: 10972463}
-  - component: {fileID: 10972465}
   m_Layer: 5
   m_Name: MakeCharacter_Button_Text
   m_TagString: Untagged
@@ -256,18 +255,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10972461}
   m_CullTransparentMesh: 0
---- !u!114 &10972465
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 10972461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebeb66043e38fc744aec9adbadf6c749, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &21062000
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,17 +663,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 107351165}
         m_MethodName: makeCharacter
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_MethodName: SaveIntoJson
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

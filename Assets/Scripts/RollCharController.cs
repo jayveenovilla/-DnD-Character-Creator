@@ -83,6 +83,7 @@ public class RollCharController : MonoBehaviour
             GameManagerSingleton.Instance.player.speedJumpHeight = (float)((3.0 + GameManagerSingleton.Instance.player.defaultModifier) / 2.0);
             GameManagerSingleton.Instance.player.speedRunning = GameManagerSingleton.Instance.player.speedWalking * 2;
             GameManagerSingleton.Instance.playerCreated = true;
+            WritePlayerJson();
 
             //debug
             Debug.Log("Player Created!");
@@ -102,6 +103,14 @@ public class RollCharController : MonoBehaviour
             Debug.Log("SpeedRunning:" + GameManagerSingleton.Instance.player.speedRunning);
             Debug.Log("SpeedJumpHeight:" + GameManagerSingleton.Instance.player.speedJumpHeight);
         }
+    }
+
+    //create JSON of player variables
+    public void WritePlayerJson()
+    {
+        string _player = JsonUtility.ToJson(GameManagerSingleton.Instance.player);
+        System.IO.File.WriteAllText(Application.persistentDataPath + "/PlayerData.json", _player);
+        Debug.Log(Application.persistentDataPath);
     }
 
     // Start is called before the first frame update
@@ -127,7 +136,7 @@ public class RollCharController : MonoBehaviour
         GameManagerSingleton.Instance.player.speedWalking = 30;
         GameManagerSingleton.Instance.player.speedRunning = GameManagerSingleton.Instance.player.speedWalking * 2;
         GameManagerSingleton.Instance.playerCreated = false;
-        GameManagerSingleton.Instance.player.hitDice = 0;
+        GameManagerSingleton.Instance.player.hitDice = 12;
 
         //debug
         /*

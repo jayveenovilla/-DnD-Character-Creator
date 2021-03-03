@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class RollCharController : MonoBehaviour
 {
     public Text Textfield;
-    public bool playerCreated = false;
+    public InputField jsonOutput;
 
     //Roll abilities 7d4. save to player class. display ui text
     public void RollStrength(string text)
@@ -102,13 +102,15 @@ public class RollCharController : MonoBehaviour
             Debug.Log("SpeedWalking:" + GameManagerSingleton.Instance.player.speedWalking);
             Debug.Log("SpeedRunning:" + GameManagerSingleton.Instance.player.speedRunning);
             Debug.Log("SpeedJumpHeight:" + GameManagerSingleton.Instance.player.speedJumpHeight);
+            Debug.Log("Hit Dice:" + GameManagerSingleton.Instance.player.hitDice);
         }
     }
 
     //create JSON of player variables
     public void WritePlayerJson()
     {
-        string _player = JsonUtility.ToJson(GameManagerSingleton.Instance.player);
+        string _player = JsonUtility.ToJson(GameManagerSingleton.Instance.player,true);
+        jsonOutput.text = _player;
         System.IO.File.WriteAllText(Application.persistentDataPath + "/PlayerData.json", _player);
         Debug.Log(Application.persistentDataPath);
     }
@@ -116,7 +118,7 @@ public class RollCharController : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        //reset character defaults upon start
+        //reset character defaults upon start of rollcharacter menu
         GameManagerSingleton.Instance.player.characterName = "";
         GameManagerSingleton.Instance.player.race = "Dragonborn";
         GameManagerSingleton.Instance.player.playerClass = "Barbarian";

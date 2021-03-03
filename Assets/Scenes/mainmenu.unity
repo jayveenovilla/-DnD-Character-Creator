@@ -1134,7 +1134,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -1373,26 +1373,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75318c3c4f234d145bfcc8d28e716858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterName: 
-  race: 
-  playerClass: 
-  alignment: 
-  Ability_Strength: 0
-  Ability_Dexterity: 0
-  Ability_Constitution: 0
-  Ability_Intelligence: 0
-  Ability_Wisdom: 0
-  Ability_Charisma: 0
-  defaultModifier: 2
-  currentXP: 0
-  maxXP: 0
-  currentHP: 0
-  maxHP: 0
-  armorClass: 0
-  speedWalking: 0
-  speedRunning: 0
-  speedHeight: 0
-  ItemList: []
   playerCreated: 0
   PlayButton: {fileID: 0}
 --- !u!4 &2099713588

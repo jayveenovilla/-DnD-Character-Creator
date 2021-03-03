@@ -8,6 +8,7 @@ public class RollCharController : MonoBehaviour
 {
     public Text Textfield;
     public InputField jsonOutput;
+    public InputField TextInputField;
 
     //Roll abilities 7d4. save to player class. display ui text
     public void RollStrength(string text)
@@ -46,7 +47,16 @@ public class RollCharController : MonoBehaviour
     //set armor class as user input of RedID, 2 digits
     public void SetArmorClass(string newArmorClass)
     {
-        GameManagerSingleton.Instance.player.armorClass = int.Parse(newArmorClass);
+        uint parsedId;
+        if ((string.IsNullOrEmpty(newArmorClass) || (!uint.TryParse(newArmorClass, out parsedId))))
+        {
+            TextInputField.text = "00";
+            GameManagerSingleton.Instance.player.armorClass = 0;
+        }
+        else
+        {
+            GameManagerSingleton.Instance.player.armorClass = int.Parse(newArmorClass);
+        }
     }
 
     //roll 7 dice, 4 sided. sort and reverse. use top 3 as output for player abilities
@@ -74,7 +84,7 @@ public class RollCharController : MonoBehaviour
     //save rolled character to player class variables
     public void makeCharacter()
     {
-        if ((GameManagerSingleton.Instance.player.characterName != null) && (GameManagerSingleton.Instance.player.armorClass != 0) && (GameManagerSingleton.Instance.player.Ability_Strength != 0) && (GameManagerSingleton.Instance.player.Ability_Dexterity != 0) && (GameManagerSingleton.Instance.player.Ability_Constitution != 0) && (GameManagerSingleton.Instance.player.Ability_Intelligence != 0) && (GameManagerSingleton.Instance.player.Ability_Wisdom != 0) && (GameManagerSingleton.Instance.player.Ability_Charisma != 0))
+        if ((!string.IsNullOrEmpty(GameManagerSingleton.Instance.player.characterName)) && (GameManagerSingleton.Instance.player.Ability_Strength != 0) && (GameManagerSingleton.Instance.player.Ability_Dexterity != 0) && (GameManagerSingleton.Instance.player.Ability_Constitution != 0) && (GameManagerSingleton.Instance.player.Ability_Intelligence != 0) && (GameManagerSingleton.Instance.player.Ability_Wisdom != 0) && (GameManagerSingleton.Instance.player.Ability_Charisma != 0))
         {
             GameManagerSingleton.Instance.player.currentXP = 0;
             GameManagerSingleton.Instance.player.maxXP = int.MaxValue; 
@@ -134,7 +144,7 @@ public class RollCharController : MonoBehaviour
         GameManagerSingleton.Instance.player.maxXP = 0;
         GameManagerSingleton.Instance.player.currentHP = 0;
         GameManagerSingleton.Instance.player.maxHP = 0;
-        GameManagerSingleton.Instance.player.armorClass = 0;
+        GameManagerSingleton.Instance.player.armorClass = 00;
         GameManagerSingleton.Instance.player.speedWalking = 30;
         GameManagerSingleton.Instance.player.speedRunning = GameManagerSingleton.Instance.player.speedWalking * 2;
         GameManagerSingleton.Instance.playerCreated = false;

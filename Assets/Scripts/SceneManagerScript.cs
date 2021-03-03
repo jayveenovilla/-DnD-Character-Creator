@@ -15,6 +15,12 @@ public class SceneManagerScript : MonoBehaviour
 
     }
 
+    public void GoToPlayGame()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("playgame");
+
+    }
+
     public void QuitGame()
     {
         Application.Quit();

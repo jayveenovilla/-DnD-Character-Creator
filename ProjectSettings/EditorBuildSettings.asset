@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/rollcharacter.unity
     guid: d2e8bfa01964b4e4382e8d873b8c16bc
+  - enabled: 1
+    path: Assets/Scenes/playgame.unity
+    guid: 7e79b53fb217b3a49be7660f22c17883
   m_configObjects: {}

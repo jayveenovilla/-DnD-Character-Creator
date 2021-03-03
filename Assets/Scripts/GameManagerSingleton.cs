@@ -26,6 +26,7 @@ public class GameManagerSingleton : MonoBehaviour
     public float speedWalking;
     public float speedRunning;
     public float speedJumpHeight;
+    public int hitDice;
     public List<string> ItemList;
     public bool playerCreated = false;
     public Button PlayButton;

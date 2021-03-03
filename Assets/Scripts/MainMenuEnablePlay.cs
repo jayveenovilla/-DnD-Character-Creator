@@ -19,5 +19,9 @@ public class MainMenuEnablePlay : MonoBehaviour
         {
             PlayButton.interactable = true;
         }
+        else
+        {
+            PlayButton.interactable = false;
+        }
     }
 }

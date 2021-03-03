@@ -5436,6 +5436,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ddClass: {fileID: 1148019023}
   playerClass: 
+  hitDice: 0
 --- !u!114 &1148019023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6814,7 +6815,7 @@ MonoBehaviour:
   m_Text: 
   m_CaretBlinkRate: 0.85
   m_CaretWidth: 1
-  m_ReadOnly: 0
+  m_ReadOnly: 1
   m_ShouldActivateOnSelect: 1
 --- !u!114 &1581597420
 MonoBehaviour:

@@ -13,6 +13,7 @@ public class RollCharController : MonoBehaviour
     //public Dropdown dropdownRace;
 
     public Text Textfield;
+    /*
     public string characterName;
     public string race;
     public string playerClass;
@@ -29,7 +30,7 @@ public class RollCharController : MonoBehaviour
     public int currentHP;
     public int maxHP ;
     public int armorClass;
-    /*public float speedWalking;
+    public float speedWalking;
     public float speedRunning;
     public float speedHeight;
     public List<string> ItemList;*/
@@ -38,48 +39,48 @@ public class RollCharController : MonoBehaviour
     //Roll abilities 7d4. save to gamemanager. display ui text
     public void RollStrength(string text)
     {
-        Ability_Strength = Roll7d4() + defaultModifier;
-        Textfield.text = Ability_Strength.ToString();
+        GameManagerSingleton.Instance.Ability_Strength = Roll7d4() + GameManagerSingleton.Instance.defaultModifier;
+        Textfield.text = GameManagerSingleton.Instance.Ability_Strength.ToString();
         //Debug.Log("str: " + Ability_Strength);
-        GameManagerSingleton.Instance.Ability_Strength = Ability_Strength;
+        //GameManagerSingleton.Instance.Ability_Strength = Ability_Strength;
     }
 
     public void RollDexterity(string text)
     {
-        Ability_Dexterity = Roll7d4() + defaultModifier;
-        Textfield.text = Ability_Dexterity.ToString();  
-        GameManagerSingleton.Instance.Ability_Dexterity = Ability_Dexterity;
+        GameManagerSingleton.Instance.Ability_Dexterity = Roll7d4() + GameManagerSingleton.Instance.defaultModifier;
+        Textfield.text = GameManagerSingleton.Instance.Ability_Dexterity.ToString();  
+        //GameManagerSingleton.Instance.Ability_Dexterity = Ability_Dexterity;
 
     }
     public void RollConstitution(string text)
     {
-        Ability_Constitution = Roll7d4() + defaultModifier;
-        Textfield.text = Ability_Constitution.ToString();
-        GameManagerSingleton.Instance.Ability_Constitution = Ability_Constitution;
+        GameManagerSingleton.Instance.Ability_Constitution = Roll7d4() + GameManagerSingleton.Instance.defaultModifier;
+        Textfield.text = GameManagerSingleton.Instance.Ability_Constitution.ToString();
+        //GameManagerSingleton.Instance.Ability_Constitution = Ability_Constitution;
     }
     public void RollIntelligence(string text)
     {
-        Ability_Intelligence = Roll7d4() + defaultModifier;
-        Textfield.text = Ability_Intelligence.ToString();
-        GameManagerSingleton.Instance.Ability_Intelligence = Ability_Intelligence;
+        GameManagerSingleton.Instance.Ability_Intelligence = Roll7d4() + GameManagerSingleton.Instance.defaultModifier;
+        Textfield.text = GameManagerSingleton.Instance.Ability_Intelligence.ToString();
+        //GameManagerSingleton.Instance.Ability_Intelligence = Ability_Intelligence;
     }
     public void RollWisdom(string text)
     {
-        Ability_Wisdom = Roll7d4() + defaultModifier;
-        Textfield.text = Ability_Wisdom.ToString();
-        GameManagerSingleton.Instance.Ability_Wisdom = Ability_Wisdom;
+        GameManagerSingleton.Instance.Ability_Wisdom = Roll7d4() + GameManagerSingleton.Instance.defaultModifier;
+        Textfield.text = GameManagerSingleton.Instance.Ability_Wisdom.ToString();
+        //GameManagerSingleton.Instance.Ability_Wisdom = Ability_Wisdom;
     }
     public void RollCharisma(string text)
     {
-        Ability_Charisma = Roll7d4() + defaultModifier;
-        Textfield.text = Ability_Charisma.ToString();
-        GameManagerSingleton.Instance.Ability_Charisma = Ability_Charisma;
+        GameManagerSingleton.Instance.Ability_Charisma = Roll7d4() + GameManagerSingleton.Instance.defaultModifier;
+        Textfield.text = GameManagerSingleton.Instance.Ability_Charisma.ToString();
+        //GameManagerSingleton.Instance.Ability_Charisma = Ability_Charisma;
     }
 
     public void SetArmorClass(string newArmorClass)
     {
-        armorClass = int.Parse(newArmorClass);
-        GameManagerSingleton.Instance.armorClass = armorClass;
+        GameManagerSingleton.Instance.armorClass = int.Parse(newArmorClass);
+        //GameManagerSingleton.Instance.armorClass = armorClass;
     }
 
     public int Roll7d4()
@@ -103,8 +104,8 @@ public class RollCharController : MonoBehaviour
     //character name
     public void SaveCharName( string newName)
     {
-        this.characterName = newName;
-        GameManagerSingleton.Instance.characterName = characterName;
+        GameManagerSingleton.Instance.characterName = newName;
+        //GameManagerSingleton.Instance.characterName = characterName;
         //Debug.Log(characterName);
     }
 
@@ -113,19 +114,12 @@ public class RollCharController : MonoBehaviour
     {
         if ((GameManagerSingleton.Instance.characterName != null) && (GameManagerSingleton.Instance.armorClass != 0) && (GameManagerSingleton.Instance.Ability_Strength != 0) && (GameManagerSingleton.Instance.Ability_Dexterity != 0) && (GameManagerSingleton.Instance.Ability_Constitution != 0) && (GameManagerSingleton.Instance.Ability_Intelligence != 0) && (GameManagerSingleton.Instance.Ability_Wisdom != 0) && (GameManagerSingleton.Instance.Ability_Charisma != 0))
         {
-
-            /*
-            GameManagerSingleton.Instance.characterName = this.characterName;
-            GameManagerSingleton.Instance.Ability_Strength = this.Ability_Strength;
-            GameManagerSingleton.Instance.Ability_Constitution = this.Ability_Constitution;
-            GameManagerSingleton.Instance.Ability_Dexterity = this.Ability_Dexterity;
-            GameManagerSingleton.Instance.Ability_Intelligence = this.Ability_Intelligence;
-            GameManagerSingleton.Instance.Ability_Wisdom = this.Ability_Wisdom;
-            GameManagerSingleton.Instance.Ability_Charisma = this.Ability_Charisma;
-            */
             GameManagerSingleton.Instance.currentXP = 0;
-            GameManagerSingleton.Instance.maxXP = int.MaxValue;
-            GameManagerSingleton.Instance.speedJumpHeight = (3 + defaultModifier) / 2;
+            GameManagerSingleton.Instance.maxXP = int.MaxValue; 
+            GameManagerSingleton.Instance.currentHP = GameManagerSingleton.Instance.hitDice + GameManagerSingleton.Instance.defaultModifier;
+            GameManagerSingleton.Instance.maxHP = GameManagerSingleton.Instance.hitDice + GameManagerSingleton.Instance.defaultModifier;
+            GameManagerSingleton.Instance.speedJumpHeight = (3 + GameManagerSingleton.Instance.defaultModifier) / 2;
+            GameManagerSingleton.Instance.speedRunning = GameManagerSingleton.Instance.speedWalking * 2;
             GameManagerSingleton.Instance.playerCreated = true;
             Debug.Log("Player Created!");
 }
@@ -134,13 +128,27 @@ public class RollCharController : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        //set dropdown defaults
+        //reset character defaults upon start
+        GameManagerSingleton.Instance.characterName = "";
         GameManagerSingleton.Instance.race = "Dragonborn";
         GameManagerSingleton.Instance.playerClass = "Barbarian";
         GameManagerSingleton.Instance.alignment = "Chaotic Good";
+        GameManagerSingleton.Instance.Ability_Strength = 0;
+        GameManagerSingleton.Instance.Ability_Dexterity = 0;
+        GameManagerSingleton.Instance.Ability_Constitution = 0;
+        GameManagerSingleton.Instance.Ability_Intelligence = 0;
+        GameManagerSingleton.Instance.Ability_Wisdom = 0;
+        GameManagerSingleton.Instance.Ability_Charisma = 0;
+        GameManagerSingleton.Instance.defaultModifier = 2;
+        GameManagerSingleton.Instance.currentXP = 0;
+        GameManagerSingleton.Instance.maxXP = 0;
+        GameManagerSingleton.Instance.currentHP = 0;
+        GameManagerSingleton.Instance.maxHP = 0;
+        GameManagerSingleton.Instance.armorClass = 0;
         GameManagerSingleton.Instance.speedWalking = 30;
-        GameManagerSingleton.Instance.speedRunning = 30;
-
+        GameManagerSingleton.Instance.speedRunning = GameManagerSingleton.Instance.speedWalking * 2;
+        GameManagerSingleton.Instance.playerCreated = false;
+        GameManagerSingleton.Instance.hitDice = 0;
     }
 
     // Update is called once per frame

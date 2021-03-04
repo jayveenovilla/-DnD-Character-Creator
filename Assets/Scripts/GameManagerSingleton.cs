@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//manages persistent character abilities and game state
 [SerializeField]
 public class GameManagerSingleton : MonoBehaviour
 {

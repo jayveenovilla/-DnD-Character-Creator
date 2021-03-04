@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-
+//plays intial menu music that persists between main menu and roll character menu
 public class GameMusicPlayer : MonoBehaviour
 {
     private static GameMusicPlayer instance = null;

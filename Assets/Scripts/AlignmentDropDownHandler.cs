@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//dropdown selection for the alignment of the player
 public class AlignmentDropDownHandler : MonoBehaviour
 {
     public Dropdown ddAlignment;

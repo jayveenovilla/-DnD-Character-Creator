@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+//scene is initially disabled until character is created. currently outputs a JSON of player abilities into a selectable input textfield
 public class PlayGameScene : MonoBehaviour
 {
     public InputField jsonOutput;

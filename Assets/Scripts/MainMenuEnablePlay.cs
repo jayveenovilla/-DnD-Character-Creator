@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
+//enables play game button once player creation is complete
 public class MainMenuEnablePlay : MonoBehaviour
 {
     public Button PlayButton;
 
-    // enable play game button once character is created
     void Update()
     {
         if (GameManagerSingleton.Instance.playerCreated == true)

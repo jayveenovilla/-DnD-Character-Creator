@@ -1,9 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 
+//dropdown selection for the class of the player. hitDice determined by class and is used for Health formula
 public class ClassDropDownHandler : MonoBehaviour
 {
     public Dropdown ddClass;

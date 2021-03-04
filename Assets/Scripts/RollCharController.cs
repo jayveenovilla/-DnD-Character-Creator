@@ -1,8 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//Roll character menu. choose character name. roll for abilities. saves to player manager singleton and outputs as JSON to a selectable input textfield
 [System.Serializable]
 public class RollCharController : MonoBehaviour
 {
@@ -12,7 +12,7 @@ public class RollCharController : MonoBehaviour
     public AudioSource audioData2;
     public AudioSource audioData3;
 
-    //Roll abilities 7d4. save to player class. display ui text
+    //Roll abilities 7d4. save to player class. display ui text. plays an audio dice roll
     public void RollStrength(string text)
     {
         GameManagerSingleton.Instance.player.Ability_Strength = Roll7d4() + GameManagerSingleton.Instance.player.defaultModifier;
@@ -104,7 +104,6 @@ public class RollCharController : MonoBehaviour
             audioData1.Play(0);
 
             //debug
-            /*
             Debug.Log("Player Created!");
             Debug.Log("Name:" + GameManagerSingleton.Instance.player.characterName);
             Debug.Log("Race:" + GameManagerSingleton.Instance.player.race);
@@ -122,7 +121,6 @@ public class RollCharController : MonoBehaviour
             Debug.Log("SpeedRunning:" + GameManagerSingleton.Instance.player.speedRunning);
             Debug.Log("SpeedJumpHeight:" + GameManagerSingleton.Instance.player.speedJumpHeight);
             Debug.Log("Hit Dice:" + GameManagerSingleton.Instance.player.hitDice);
-            */
         }
 
         //play error if character creation is incomplete and display needed variables
@@ -168,13 +166,14 @@ public class RollCharController : MonoBehaviour
         }
     }
 
-    //create JSON of player variables
+    //create JSON of player variables. output to selectable input textfield for further external JSON validation
     public void WritePlayerJson()
     {
         string _player = JsonUtility.ToJson(GameManagerSingleton.Instance.player,true);
         TextInputField.text = _player;
+        //write player JSON to persistentDataPath
         System.IO.File.WriteAllText(Application.persistentDataPath + "/PlayerData.json", _player);
-        Debug.Log(Application.persistentDataPath);
+        Debug.Log("Persistent Data Path: " + Application.persistentDataPath);
     }
 
     // Start is called before the first frame update

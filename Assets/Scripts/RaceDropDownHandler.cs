@@ -1,8 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
+//dropdown selection for the race of the player. speed also determined through chosen race
 public class RaceDropDownHandler : MonoBehaviour
 {
     public Dropdown ddRace;

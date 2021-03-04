@@ -131,7 +131,7 @@ public class RollCharController : MonoBehaviour
 
             if (string.IsNullOrEmpty(GameManagerSingleton.Instance.player.characterName))
             {
-                TextInputField.text = TextInputField.text + "\n" + "     " + "Create a Character Name";
+                TextInputField.text = TextInputField.text + "\n" + "     " + "Create a Name";
             }
 
             if (GameManagerSingleton.Instance.player.Ability_Strength == 0)
@@ -172,8 +172,8 @@ public class RollCharController : MonoBehaviour
         string _player = JsonUtility.ToJson(GameManagerSingleton.Instance.player,true);
         TextInputField.text = _player;
         //write player JSON to persistentDataPath
-        System.IO.File.WriteAllText(Application.persistentDataPath + "/PlayerData.json", _player);
-        Debug.Log("Persistent Data Path: " + Application.persistentDataPath);
+        //System.IO.File.WriteAllText(Application.persistentDataPath + "/PlayerData.json", _player);
+        //Debug.Log("Persistent Data Path: " + Application.persistentDataPath);
     }
 
     // Start is called before the first frame update

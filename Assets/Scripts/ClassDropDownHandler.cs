@@ -21,7 +21,6 @@ public class ClassDropDownHandler : MonoBehaviour
 
     public void ddClassValueChanged(Dropdown sender)
     {
-        Debug.Log("You have selected :" + sender.value);
         switch (sender.value)
         {
             case 0:
@@ -84,6 +83,7 @@ public class ClassDropDownHandler : MonoBehaviour
                 hitDice = 6;
                 break;
         }
+        Debug.Log("You have selected :" + sender.value + " " + playerClass);
         GameManagerSingleton.Instance.player.playerClass = playerClass;
         GameManagerSingleton.Instance.player.hitDice = hitDice;
     }

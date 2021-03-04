@@ -54,23 +54,5 @@ public class GameManagerSingleton : MonoBehaviour
             player = new Player();
             
         }
-        //Debug.Log("strength is:" + Instance.Ability_Strength);
-        //Debug.Log("dexterity is:" + Instance.Ability_Dexterity);
-        //Debug.Log("race is:" + Instance.race);
     }
-
-    
-
-
-    // Start is called before the first frame update
-    /*void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }*/
 }

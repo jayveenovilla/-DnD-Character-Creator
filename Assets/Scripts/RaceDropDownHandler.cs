@@ -20,7 +20,6 @@ public class RaceDropDownHandler : MonoBehaviour
 
     public void ddRaceValueChanged(Dropdown sender)
     {
-        Debug.Log("You have selected :" + sender.value);
         switch (sender.value)
         {
             case 0: 
@@ -68,12 +67,8 @@ public class RaceDropDownHandler : MonoBehaviour
                 speedWalking = 30;
                 break;
         }
+        Debug.Log("You have selected :" + sender.value + " " + race);
         GameManagerSingleton.Instance.player.race = race;
         GameManagerSingleton.Instance.player.speedWalking = speedWalking;
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

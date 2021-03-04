@@ -59,7 +59,7 @@ public class RollCharController : MonoBehaviour
         }
     }
 
-    //roll 7 dice, 4 sided. sort and reverse. use top 3 as output for player abilities
+    //roll 7 dice, 4 sided. sort and reverse. use sum of top 3 as output for player abilities
     public int Roll7d4()
     {
         int outVal;
@@ -152,7 +152,7 @@ public class RollCharController : MonoBehaviour
         GameManagerSingleton.Instance.playerCreated = false;
         GameManagerSingleton.Instance.player.hitDice = 12;
 
-        //debug
+        //debug on start rollchar menu
         /*
         Debug.Log("Player Reset!");
         Debug.Log("Name:" + GameManagerSingleton.Instance.player.characterName);
@@ -171,11 +171,5 @@ public class RollCharController : MonoBehaviour
         Debug.Log("SpeedRunning:" + GameManagerSingleton.Instance.player.speedRunning);
         Debug.Log("SpeedJumpHeight:" + GameManagerSingleton.Instance.player.speedJumpHeight);
         */
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

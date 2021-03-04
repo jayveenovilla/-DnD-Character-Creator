@@ -500,6 +500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Textfield: {fileID: 0}
   TextInputField: {fileID: 33769658}
+  audioData: {fileID: 0}
 --- !u!1 &74355177
 GameObject:
   m_ObjectHideFlags: 0
@@ -820,6 +821,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Textfield: {fileID: 0}
   TextInputField: {fileID: 802413393}
+  audioData: {fileID: 0}
 --- !u!1 &130936661
 GameObject:
   m_ObjectHideFlags: 0
@@ -1427,6 +1429,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Textfield: {fileID: 879554968}
   TextInputField: {fileID: 0}
+  audioData: {fileID: 0}
 --- !u!114 &264768480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1862,6 +1865,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Textfield: {fileID: 525410243}
   TextInputField: {fileID: 0}
+  audioData: {fileID: 0}
 --- !u!114 &403988841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3305,6 +3309,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Textfield: {fileID: 662597006}
   TextInputField: {fileID: 0}
+  audioData: {fileID: 0}
 --- !u!1 &678562273
 GameObject:
   m_ObjectHideFlags: 0
@@ -3863,6 +3868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Textfield: {fileID: 662597006}
   TextInputField: {fileID: 0}
+  audioData: {fileID: 0}
 --- !u!1 &752926504
 GameObject:
   m_ObjectHideFlags: 0
@@ -4569,7 +4575,7 @@ MonoBehaviour:
       m_Calls: []
   m_CaretColor: {r: 1, g: 1, b: 1, a: 0}
   m_CustomCaretColor: 1
-  m_SelectionColor: {r: 1, g: 1, b: 1, a: 0}
+  m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
   m_Text: 
   m_CaretBlinkRate: 0
   m_CaretWidth: 1
@@ -6639,6 +6645,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Textfield: {fileID: 232858797}
   TextInputField: {fileID: 0}
+  audioData: {fileID: 0}
 --- !u!114 &1524146456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7159,6 +7166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Textfield: {fileID: 74355179}
   TextInputField: {fileID: 0}
+  audioData: {fileID: 0}
 --- !u!114 &1800565177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7732,6 +7740,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Textfield: {fileID: 1121101235}
   TextInputField: {fileID: 0}
+  audioData: {fileID: 0}
 --- !u!114 &1929828063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7889,6 +7898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Textfield: {fileID: 1022835674}
   TextInputField: {fileID: 0}
+  audioData: {fileID: 0}
 --- !u!114 &1979052567
 MonoBehaviour:
   m_ObjectHideFlags: 0

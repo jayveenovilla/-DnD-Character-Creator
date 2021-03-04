@@ -19,7 +19,6 @@ public class AlignmentDropDownHandler : MonoBehaviour
 
     public void ddAlignmentValueChanged(Dropdown sender)
     {
-        Debug.Log("You have selected :" + sender.value);
         switch (sender.value)
         {
             case 0:
@@ -58,6 +57,7 @@ public class AlignmentDropDownHandler : MonoBehaviour
                 alignment = "Lawful Evil";
                 break;
         }
+        Debug.Log("You have selected :" + sender.value + " " + alignment);
         GameManagerSingleton.Instance.player.alignment = alignment;
     }
 }

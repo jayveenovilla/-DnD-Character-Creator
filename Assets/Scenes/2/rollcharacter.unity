@@ -6252,8 +6252,6 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Sorcerer
       m_Image: {fileID: 0}
-    - m_Text: Sorcerer
-      m_Image: {fileID: 0}
     - m_Text: Warlock
       m_Image: {fileID: 0}
     - m_Text: Wizard

@@ -7,8 +7,8 @@ using UnityEngine.UI;
 public class RollCharController : MonoBehaviour
 {
     public Text Textfield;
-    public InputField jsonOutput;
     public InputField TextInputField;
+    public AudioSource audioData;
 
     //Roll abilities 7d4. save to player class. display ui text
     public void RollStrength(string text)
@@ -94,6 +94,8 @@ public class RollCharController : MonoBehaviour
             GameManagerSingleton.Instance.player.speedRunning = GameManagerSingleton.Instance.player.speedWalking * 2;
             GameManagerSingleton.Instance.playerCreated = true;
             WritePlayerJson();
+            audioData = GetComponent<AudioSource>();
+            audioData.Play(0);
 
             //debug
             Debug.Log("Player Created!");
@@ -120,7 +122,7 @@ public class RollCharController : MonoBehaviour
     public void WritePlayerJson()
     {
         string _player = JsonUtility.ToJson(GameManagerSingleton.Instance.player,true);
-        jsonOutput.text = _player;
+        TextInputField.text = _player;
         System.IO.File.WriteAllText(Application.persistentDataPath + "/PlayerData.json", _player);
         Debug.Log(Application.persistentDataPath);
     }

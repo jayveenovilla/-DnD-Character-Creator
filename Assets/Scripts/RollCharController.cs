@@ -10,44 +10,45 @@ public class RollCharController : MonoBehaviour
     public InputField TextInputField;
     public AudioSource audioData1;
     public AudioSource audioData2;
+    public AudioSource audioData3;
 
     //Roll abilities 7d4. save to player class. display ui text
     public void RollStrength(string text)
     {
         GameManagerSingleton.Instance.player.Ability_Strength = Roll7d4() + GameManagerSingleton.Instance.player.defaultModifier;
         Textfield.text = GameManagerSingleton.Instance.player.Ability_Strength.ToString();
-        Textfield.color = Color.black;
+        audioData3.Play(0);
     }
 
     public void RollDexterity(string text)
     {
         GameManagerSingleton.Instance.player.Ability_Dexterity = Roll7d4() + GameManagerSingleton.Instance.player.defaultModifier;
         Textfield.text = GameManagerSingleton.Instance.player.Ability_Dexterity.ToString();
-        Textfield.color = Color.black;
+        audioData3.Play(0);
     }
     public void RollConstitution(string text)
     {
         GameManagerSingleton.Instance.player.Ability_Constitution = Roll7d4() + GameManagerSingleton.Instance.player.defaultModifier;
         Textfield.text = GameManagerSingleton.Instance.player.Ability_Constitution.ToString();
-        Textfield.color = Color.black;
+        audioData3.Play(0);
     }
     public void RollIntelligence(string text)
     {
         GameManagerSingleton.Instance.player.Ability_Intelligence = Roll7d4() + GameManagerSingleton.Instance.player.defaultModifier;
         Textfield.text = GameManagerSingleton.Instance.player.Ability_Intelligence.ToString();
-        Textfield.color = Color.black;
+        audioData3.Play(0);
     }
     public void RollWisdom(string text)
     {
         GameManagerSingleton.Instance.player.Ability_Wisdom = Roll7d4() + GameManagerSingleton.Instance.player.defaultModifier;
         Textfield.text = GameManagerSingleton.Instance.player.Ability_Wisdom.ToString();
-        Textfield.color = Color.black;
+        audioData3.Play(0);
     }
     public void RollCharisma(string text)
     {
         GameManagerSingleton.Instance.player.Ability_Charisma = Roll7d4() + GameManagerSingleton.Instance.player.defaultModifier;
         Textfield.text = GameManagerSingleton.Instance.player.Ability_Charisma.ToString();
-        Textfield.color = Color.black;
+        audioData3.Play(0);
     }
 
     //set armor class as user input of RedID, 2 digits

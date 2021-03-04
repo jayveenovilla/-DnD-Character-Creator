@@ -8,40 +8,46 @@ public class RollCharController : MonoBehaviour
 {
     public Text Textfield;
     public InputField TextInputField;
-    public AudioSource audioData;
+    public AudioSource audioData1;
+    public AudioSource audioData2;
 
     //Roll abilities 7d4. save to player class. display ui text
     public void RollStrength(string text)
     {
         GameManagerSingleton.Instance.player.Ability_Strength = Roll7d4() + GameManagerSingleton.Instance.player.defaultModifier;
         Textfield.text = GameManagerSingleton.Instance.player.Ability_Strength.ToString();
+        Textfield.color = Color.black;
     }
 
     public void RollDexterity(string text)
     {
         GameManagerSingleton.Instance.player.Ability_Dexterity = Roll7d4() + GameManagerSingleton.Instance.player.defaultModifier;
-        Textfield.text = GameManagerSingleton.Instance.player.Ability_Dexterity.ToString();  
-
+        Textfield.text = GameManagerSingleton.Instance.player.Ability_Dexterity.ToString();
+        Textfield.color = Color.black;
     }
     public void RollConstitution(string text)
     {
         GameManagerSingleton.Instance.player.Ability_Constitution = Roll7d4() + GameManagerSingleton.Instance.player.defaultModifier;
         Textfield.text = GameManagerSingleton.Instance.player.Ability_Constitution.ToString();
+        Textfield.color = Color.black;
     }
     public void RollIntelligence(string text)
     {
         GameManagerSingleton.Instance.player.Ability_Intelligence = Roll7d4() + GameManagerSingleton.Instance.player.defaultModifier;
         Textfield.text = GameManagerSingleton.Instance.player.Ability_Intelligence.ToString();
+        Textfield.color = Color.black;
     }
     public void RollWisdom(string text)
     {
         GameManagerSingleton.Instance.player.Ability_Wisdom = Roll7d4() + GameManagerSingleton.Instance.player.defaultModifier;
         Textfield.text = GameManagerSingleton.Instance.player.Ability_Wisdom.ToString();
+        Textfield.color = Color.black;
     }
     public void RollCharisma(string text)
     {
         GameManagerSingleton.Instance.player.Ability_Charisma = Roll7d4() + GameManagerSingleton.Instance.player.defaultModifier;
         Textfield.text = GameManagerSingleton.Instance.player.Ability_Charisma.ToString();
+        Textfield.color = Color.black;
     }
 
     //set armor class as user input of RedID, 2 digits
@@ -87,17 +93,17 @@ public class RollCharController : MonoBehaviour
         if ((!string.IsNullOrEmpty(GameManagerSingleton.Instance.player.characterName)) && (GameManagerSingleton.Instance.player.Ability_Strength != 0) && (GameManagerSingleton.Instance.player.Ability_Dexterity != 0) && (GameManagerSingleton.Instance.player.Ability_Constitution != 0) && (GameManagerSingleton.Instance.player.Ability_Intelligence != 0) && (GameManagerSingleton.Instance.player.Ability_Wisdom != 0) && (GameManagerSingleton.Instance.player.Ability_Charisma != 0))
         {
             GameManagerSingleton.Instance.player.currentXP = 0;
-            GameManagerSingleton.Instance.player.maxXP = int.MaxValue; 
+            GameManagerSingleton.Instance.player.maxXP = int.MaxValue;
             GameManagerSingleton.Instance.player.currentHP = GameManagerSingleton.Instance.player.hitDice + GameManagerSingleton.Instance.player.defaultModifier;
             GameManagerSingleton.Instance.player.maxHP = GameManagerSingleton.Instance.player.hitDice + GameManagerSingleton.Instance.player.defaultModifier;
             GameManagerSingleton.Instance.player.speedJumpHeight = (float)((3.0 + GameManagerSingleton.Instance.player.defaultModifier) / 2.0);
             GameManagerSingleton.Instance.player.speedRunning = GameManagerSingleton.Instance.player.speedWalking * 2;
             GameManagerSingleton.Instance.playerCreated = true;
             WritePlayerJson();
-            audioData = GetComponent<AudioSource>();
-            audioData.Play(0);
+            audioData1.Play(0);
 
             //debug
+            /*
             Debug.Log("Player Created!");
             Debug.Log("Name:" + GameManagerSingleton.Instance.player.characterName);
             Debug.Log("Race:" + GameManagerSingleton.Instance.player.race);
@@ -115,6 +121,49 @@ public class RollCharController : MonoBehaviour
             Debug.Log("SpeedRunning:" + GameManagerSingleton.Instance.player.speedRunning);
             Debug.Log("SpeedJumpHeight:" + GameManagerSingleton.Instance.player.speedJumpHeight);
             Debug.Log("Hit Dice:" + GameManagerSingleton.Instance.player.hitDice);
+            */
+        }
+
+        //play error if character creation is incomplete and display needed variables
+        if ((string.IsNullOrEmpty(GameManagerSingleton.Instance.player.characterName)) || (GameManagerSingleton.Instance.player.Ability_Strength == 0) || (GameManagerSingleton.Instance.player.Ability_Dexterity == 0) || (GameManagerSingleton.Instance.player.Ability_Constitution == 0) || (GameManagerSingleton.Instance.player.Ability_Intelligence == 0) || (GameManagerSingleton.Instance.player.Ability_Wisdom == 0) || (GameManagerSingleton.Instance.player.Ability_Charisma == 0))
+        {
+            audioData2.Play(0);
+            TextInputField.text = "Character Incomplete:";
+
+            if (string.IsNullOrEmpty(GameManagerSingleton.Instance.player.characterName))
+            {
+                TextInputField.text = TextInputField.text + "\n" + "     " + "Create a Character Name";
+            }
+
+            if (GameManagerSingleton.Instance.player.Ability_Strength == 0)
+            {
+                TextInputField.text = TextInputField.text + "\n" + "     " + "Roll for Strength";
+            }
+
+            if (GameManagerSingleton.Instance.player.Ability_Dexterity == 0)
+            {
+                TextInputField.text = TextInputField.text + "\n" + "     " + "Roll for Dexterity";
+            }
+
+            if (GameManagerSingleton.Instance.player.Ability_Constitution == 0)
+            {
+                TextInputField.text = TextInputField.text + "\n" + "     " + "Roll for Constitution";
+            }
+
+            if (GameManagerSingleton.Instance.player.Ability_Intelligence == 0)
+            {
+                TextInputField.text = TextInputField.text + "\n" + "     " + "Roll for Intelligence";
+            }
+
+            if (GameManagerSingleton.Instance.player.Ability_Wisdom == 0)
+            {
+                TextInputField.text = TextInputField.text + "\n" + "     " + "Roll for Wisdom";
+            }
+
+            if (GameManagerSingleton.Instance.player.Ability_Charisma == 0)
+            {
+                TextInputField.text = TextInputField.text + "\n" + "     " + "Roll for Charisma";
+            }
         }
     }
 

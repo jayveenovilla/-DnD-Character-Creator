@@ -5,3 +5,7 @@ The swinging dutchman by Stefan Kartenberg (c) copyright 2021 Licensed under a C
 Rising.mp3 by HorrorPen. OpenGameArt.org (http://opengameart.org)
 
 battlebackgrounds by Nidhoggn. OpenGameArt.org (http://opengameart.org)
+
+Font Name "Allura" by 2011 TypeSETit, LLC (typesetit@att.net)
+
+Error or failed.mp3 - Some of the sounds in this project were created by David McKee (ViRiX) soundcloud.com/virix OpenGameArt.org (http://opengameart.org)
